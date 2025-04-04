@@ -8,8 +8,6 @@ import gator from './assets/svg/gator.svg'
 import heart from './assets/svg/heart.svg'
 import horse from './assets/svg/horse.svg'
 
-
-
 import './AnimalsShow.css'
 
 const svgMap = {
@@ -18,7 +16,6 @@ const svgMap = {
     cat,
     cow,
     gator,
-    heart,
     horse
 }
 
@@ -31,23 +28,22 @@ function AnimalsShow({type}){
 
     return(
         <div
-            onClick={handleClick}
-            className="animal-show"
+            onClick={handleClick} 
+            className="animals-show"
         >
-            <img
-                src={svgMap[type]}
-                alt="animal"
-                className="animal"
+            <img 
+                src={svgMap[type]} 
+                alt="animal" 
+                className="animal" 
             />
-            <img
-                src={heart}
+            <img 
+                src={heart} 
                 alt="heart"
                 style={{ width: 10 + 10 * clicks + 'px'}}
                 className="heart"
             />
-        </div>    
+        </div>
     )
 }
-
 
 export default AnimalsShow
